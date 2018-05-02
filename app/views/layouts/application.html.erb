@@ -2,28 +2,234 @@
 <html>
   <head>
     <title>Nameofapp</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Yeseva+One" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../../assets/stylesheets/icofont.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/navigation.css"> -->
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
-    <nav>
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "About", simple_pages_about_path %></li>
-      <li><%= link_to "Contact", simple_pages_contact_path %></li>
-    </ul>
-  </nav>
+    <!-- Start Top Header Bar -->
+<section class="top-header">
+	<div class="head container">
+		<div class="row">
+			<div class="col-md-4 col-xs-12 col-sm-4">
+				<div class="contact-number">
+          <span class="glyphicon glyphicon-earphone"></span>
+					<span>0129- 12323-123123</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-12 col-sm-4">
+				<!-- Site Logo -->
+				<div class="logo text-center">
+					<a href="index.html">
+						<!-- replace logo here -->
+						<svg width="200px" height="70px" viewBox="0 0 200 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="40" font-family="AustinBold, Austin" font-weight="bold">
+						        <g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
+						            <text id="BikeBerlin">
+						                <tspan x="108.94" y="325">Bike Berlin</tspan>
+						            </text>
+						        </g>
+						    </g>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-12 col-sm-4">
+			<!-- Cart -->
+			<ul class="top-menu text-right list-inline">
+	          <li class="dropdown cart-nav dropdown-slide">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+	            <div class="dropdown-menu cart-dropdown">
+	            	<!-- Cart Item -->
+	            	<div class="media">
+	            		<a class="pull-left" href="#">
+	            			<img  class="media-object" src="#" alt="image"/>
+	            		</a>
+	            		<!-- <div class="media-body">
+	            			<h4 class="media-heading"><a href="">Ladies Bag</a></h4>
+	            			<div class="cart-price">
+                              <span>1 x</span>
+                              <span>1250.00</span>
+                            </div>
+                            <h5><strong>$1200</strong></h5>
+	            		</div> -->
+	            	</div><!-- / Cart Item -->
+	            	<!-- Cart Item -->
+
+	            	<div class="cart-summary">
+                        <span>Total</span>
+                        <span class="total-price">0.00€</span>
+                    </div>
+                    <ul class="text-center cart-buttons">
+                    	<li><a href="#" class="btn btn-small">View Cart</a></li>
+                    	<li><a href="#" class="btn btn-small btn-solid-border">Checkout</a></li>
+                    </ul>
+                </div>
+
+	          </li><!-- / Cart -->
+
+	          <!-- Search -->
+	          <li class="dropdown search dropdown-slide">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-search"></span> Search</a>
+	            <ul class="dropdown-menu search-dropdown">
+	              <li><form action="post"><input type="search" class="form-control" placeholder="Search..."></form></li>
+	            </ul>
+	          </li><!-- / Search -->
+
+	        </ul><!-- / .nav .navbar-nav .navbar-right -->
+			</div>
+		</div>
+	</div>
+</section><!-- End Top Header Bar -->
+
+
+<!-- Main Menu Section -->
+<section class="menu">
+	<nav class="navbar navigation">
+	    <div class="container">
+	      <div class="navbar-header">
+	      	<h2 class="menu-title">Main Menu</h2>
+	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	          <span class="sr-only">Toggle navigation</span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
+
+	      </div><!-- / .navbar-header -->
+
+	      <!-- Navbar Links -->
+	      <div id="navbar" class="navbar-collapse collapse text-center">
+	        <ul class="nav navbar-nav">
+
+	          <!-- Home -->
+	          <li class="dropdown ">
+	            <a href="index.html">Home</a>
+	          </li><!-- / Home -->
+
+
+	          <!-- Elements -->
+	          <li class="dropdown dropdown-slide">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Shop <span class="tf-ion-ios-arrow-down"></span></a>
+	            <div class="dropdown-menu">
+	              <div class="row">
+
+	                <!-- Categories -->
+	                <div class="col-lg-6 col-md-6 mb-sm-3">
+	                	<ul>
+							        <li class="dropdown-header">Categories</li>
+							        <li role="separator" class="divider"></li>
+							        <li><a href="#">Racing Bikes</a></li>
+							        <li><a href="#">Vintage Bikes</a></li>
+							        <li><a href="#">Roadster</a></li
+	                	</ul>
+	                </div>
+	              </div><!-- / .row -->
+	            </div><!-- / .dropdown-menu -->
+	          </li><!-- / Elements -->
+
+
+	          <!-- Info -->
+	          <li class="dropdown dropdown-slide">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Info <span class="tf-ion-ios-arrow-down"></span></a>
+	            <div class="dropdown-menu">
+	              	<div class="row">
+
+		                <!-- Introduction -->
+		                <div class="col-sm-3 col-xs-12">
+		                	<ul>
+								         <li class="dropdown-header">Info</li>
+								         <li role="separator" class="divider"></li>
+                         <li><%= link_to "Contact", simple_pages_contact_path %></li>
+								         <li><%= link_to "About", simple_pages_about_path %>
+		                	</ul>
+		                </div>
+	              	</div><!-- / .row -->
+	            </div><!-- / .dropdown-menu -->
+	          </li><!-- / Pages -->
+	        </ul><!-- / .nav .navbar-nav -->
+
+	      	</div><!--/.navbar-collapse -->
+	    </div><!-- / .container -->
+	</nav>
+</section>
+
+    <!-- <nav class="navbar navbar-default">
+  <div class="container box"> -->
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="heading navbar-brand" href="#">Bike Berlin</a>
+    </div> -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- <div class="navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="navi nav navbar-nav">
+        <li class="nav navbar-nav"><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", simple_pages_about_path %><span class="sr-only">(current)</span></li>
+        <li><%= link_to "Contact", simple_pages_contact_path %></li>
+      </ul>
+      <a href="#">Login</a>
+      <a><span class="glyphicon glyphicon-shopping-cart"></span></a>
+    </div>
+  </div>
+</nav> -->
+
 
   <%= yield %>
 
-  <footer>
-    &copy; 2018 Bike Berlin
-  </footer>
+  <footer class="footer section text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="social-media">
+					<li>
+						<a href="">
+							<i class="icofont icofont-social-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<i class="icofont icofont-social-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<i class="icofont icofont-social-pinterest"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer-menu">
+					<li>
+						<%= link_to "Contact", simple_pages_contact_path %>
+					</li>
+          <li>
+						<%= link_to "About", simple_pages_about_path %>
+					</li>
+				</ul>
+				<p class="copyright-text">&copy; 2018 Bike Berlin</p>
+			</div>
+		</div>
+	</div>
+</footer>
 
   </body>
 </html>
