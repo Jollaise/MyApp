@@ -5,19 +5,10 @@ body {
   font-family: "Arimo", Arial, sans-serif;
 }
 
-h1 {
-  font-family: "Pacifico", monospace;
-  text-align: center;
-}
-
 #BikeBerlin {
   font-family: "Yeseva One", monospace;
   font-size: 30px;
   display: inline-block;
-  // position: absolute;
-  // left: 50%;
-  // margin-left: -50px;
-  // margin-top: 10px;
 }
 
 // @font-face {
@@ -672,13 +663,6 @@ blockquote {
   display: inline-block;
   margin-right: 10px;
 }
-
-// @media (max-width: 400px) {
-//   .social-icon ul li {
-//     margin-bottom: 5px;
-//     margin-right: 5px;
-//   }
-// }
 
 .social-icon ul li a {
   display: block;
