@@ -6,10 +6,33 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Yeseva One", monospace;
 }
 
+.centered {
+  text-align: center;
+}
+
+
 #productPrice {
   font-weight: 700;
 }
 
 .productImage {
  max-height: 238px;
+}
+
+.newProduct {
+  border: 1px solid black;
+  margin: auto;
+  width: 500px;
+}
+
+.field {
+  margin-left: 50px;
+}
+
+label, input {
+  display: inline-block;
+}
+
+.field>.formField, .formLabel {
+  display: inline-block;
 }

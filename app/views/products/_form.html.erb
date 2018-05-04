@@ -1,4 +1,4 @@
-<%= form_with(model: product, local: true) do |form| %>
+<%= form_with(model: product, local: true, class: "productForm") do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -12,28 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, class: :formLabel %>
+    <%= form.text_field :name, class: :formField %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :description, class: :formLabel %>
+    <%= form.text_area :description, class: :formField %>
   </div>
 
   <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+    <%= form.label :image_url, class: :formLabel %>
+    <%= form.text_field :image_url, class: :formField %>
   </div>
 
   <div class="field">
-    <%= form.label :colour %><br>
-    <%= form.text_field :colour %>
+    <%= form.label :colour, class: :formLabel %><br>
+    <%= form.text_field :colour, class: :formField %>
   </div>
 
   <div class="field">
-    <%= form.label :price %><br>
-    <%= form.text_field :price %>
+    <%= form.label :price, class: :formLabel %><br>
+    <%= form.text_field :price, class: :formField %>
   </div>
 
   <div class="actions">
