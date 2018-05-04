@@ -117,9 +117,8 @@
 
 	          <!-- Home -->
 	          <li class="dropdown ">
-	            <a href="index.html">Home</a>
+	            <%= link_to "Home", simple_pages_index_path %>
 	          </li><!-- / Home -->
-
 
 	          <!-- Elements -->
 	          <li class="dropdown dropdown-slide">
@@ -134,27 +133,25 @@
 							        <li role="separator" class="divider"></li>
 							        <li><a href="#">Racing Bikes</a></li>
 							        <li><a href="#">Vintage Bikes</a></li>
-							        <li><a href="#">Roadster</a></li
+							        <li><a href="#">Roadster</a></li>
 	                	</ul>
 	                </div>
 	              </div><!-- / .row -->
 	            </div><!-- / .dropdown-menu -->
 	          </li><!-- / Elements -->
 
-
 	          <!-- Info -->
 	          <li class="dropdown dropdown-slide">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Info <i class="icofont icofont-thin-down"></i></a>
 	            <div class="dropdown-menu">
 	              	<div class="row">
-
 		                <!-- Introduction -->
 		                <div class="col-sm-3 col-xs-12">
 		                	<ul>
 								         <li class="dropdown-header">Info</li>
 								         <li role="separator" class="divider"></li>
                          <li><%= link_to "Contact", simple_pages_contact_path %></li>
-								         <li><%= link_to "About", simple_pages_about_path %>
+								         <li><%= link_to "About", simple_pages_about_path %></li>
 		                	</ul>
 		                </div>
 	              	</div><!-- / .row -->
@@ -167,33 +164,6 @@
 	</nav>
 </section>
 
-    <!-- <nav class="navbar navbar-default">
-  <div class="container box"> -->
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <!-- <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="heading navbar-brand" href="#">Bike Berlin</a>
-    </div> -->
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <!-- <div class="navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="navi nav navbar-nav">
-        <li class="nav navbar-nav"><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", simple_pages_about_path %><span class="sr-only">(current)</span></li>
-        <li><%= link_to "Contact", simple_pages_contact_path %></li>
-      </ul>
-      <a href="#">Login</a>
-      <a><span class="glyphicon glyphicon-shopping-cart"></span></a>
-    </div>
-  </div>
-</nav> -->
-
-
   <%= yield %>
 
   <footer class="footer section text-center">
@@ -202,19 +172,13 @@
 			<div class="col-md-12">
 				<ul class="social-media">
 					<li>
-						<a href="">
-							<i class="icofont icofont-social-facebook"></i>
-						</a>
+						<a href=""><i class="icofont icofont-social-facebook"></i></a>
 					</li>
 					<li>
-						<a href="">
-							<i class="icofont icofont-social-instagram"></i>
-						</a>
+						<a href=""><i class="icofont icofont-social-instagram"></i></a>
 					</li>
 					<li>
-						<a href="">
-							<i class="icofont icofont-social-pinterest"></i>
-						</a>
+						<a href=""><i class="icofont icofont-social-pinterest"></i></a>
 					</li>
 				</ul>
 				<ul class="footer-menu">
@@ -222,8 +186,8 @@
 						<%= link_to "Contact", simple_pages_contact_path %>
 					</li>
           <li>
-						<%= link_to "About", simple_pages_about_path %>
-					</li>
+            <%= link_to "About", simple_pages_about_path %>
+          </li>
 				</ul>
 				<p class="copyright-text">&copy; 2018 Bike Berlin</p>
 			</div>

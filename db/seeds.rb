@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.where(name: "seed-generated product").destroy_all
+Product.where(name: "Roadster 'Louis'").destroy_all
