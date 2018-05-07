@@ -33,7 +33,7 @@
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
 				<div class="logo text-center">
-					<a href="index.html">
+          <%= link_to root_path do %>
 						<!-- replace logo here -->
 						<svg width="200px" height="70px" viewBox="0 0 200 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="40" font-family="AustinBold, Austin" font-weight="bold">
@@ -44,7 +44,7 @@
 						        </g>
 						    </g>
 						</svg>
-					</a>
+          <% end %>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12 col-sm-4">
@@ -117,7 +117,7 @@
 
 	          <!-- Home -->
 	          <li class="dropdown ">
-	            <%= link_to "Home", simple_pages_index_path %>
+	            <%= link_to "Home", root_path %>
 	          </li><!-- / Home -->
 
 	          <!-- Elements -->
