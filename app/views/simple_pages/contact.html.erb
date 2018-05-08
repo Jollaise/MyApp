@@ -1,4 +1,4 @@
-<h1>Contact</h1>
+<!-- <h1>Contact</h1>
 <p>You can find us here:</p>
 <ul>
   <li>Stresemannstr. 123</li>
@@ -6,4 +6,103 @@
 </ul>
 
 <h3>Leave us a messsage:</h3>
-<p>bikes@berlin.com</p>
+<p>bikes@berlin.com</p> -->
+
+<section class="page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="content">
+					<h1 class="page-name">Contact Us</h1>
+					<ol class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li class="active">contact</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="page-wrapper">
+	<div class="contact-section">
+		<div class="container">
+			<div class="row">
+				<!-- Contact Form -->
+				<div class="contact-form col-md-6 " >
+					<form id="contact-form" method="post" action="" role="form">
+
+						<div class="form-group">
+							<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+						</div>
+
+						<div class="form-group">
+							<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+						</div>
+
+						<div class="form-group">
+							<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+						</div>
+
+						<div class="form-group">
+							<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
+						</div>
+
+						<div id="mail-success" class="success">
+							Thank you. The Mailman is on His Way :)
+						</div>
+
+						<div id="mail-fail" class="error">
+							Sorry, don't know what happened. Try later :(
+						</div>
+
+						<div id="cf-submit">
+							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+						</div>
+
+					</form>
+				</div>
+				<!-- ./End Contact Form -->
+
+				<!-- Contact Details -->
+				<div class="contact-details col-md-6 " >
+					<div class="google-map">
+						<div id="map"></div>
+					</div>
+					<ul class="contact-short-info" >
+						<li>
+							<i class="icofont icofont-home"></i>
+							<span>Stresemannstr. 123, Kreuzberg, 10963 Berlin</span>
+						</li>
+						<li>
+							<i class="icofont icofont-smart-phone"></i>
+							<span>Phone: 0129- 12323-123123</span>
+						</li>
+						<li>
+							<i class="icofont icofont-ui-email"></i>
+							<span>Email: hello@bikeberlin.com</span>
+						</li>
+					</ul>
+					<!-- Footer Social Links -->
+					<div class="social-icon">
+						<ul>
+							<li><a class="fb-icon" href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+							<li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+							<li><a href="#"><i class="icofont icofont-social-google-plus"></i></a></li>
+							<li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
+						</ul>
+					</div>
+					<!--/. End Footer Social Links -->
+				</div>
+				<!-- / End Contact Details -->
+
+
+
+			</div> <!-- end row -->
+		</div> <!-- end container -->
+	</div>
+</section>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy_ygqydZJU6H_vonvQCEt-21NnbbT2f8&callback=initMap">
+</script>
