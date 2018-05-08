@@ -96,7 +96,7 @@ var styledMapType = new google.maps.StyledMapType(
       ],
       {name: 'Styled Map'});
 
-      var myLatLng = {lat: 48.1979809, lng: 11.6449693};
+      var myLatLng = {lat: 52.5073893, lng: 13.3759072};
 
       var map = new google.maps.Map(document.getElementById('map'), {
         center: myLatLng,
