@@ -25,10 +25,19 @@ h1, h2, h3, h4, h5, h6 {
   width: 500px;
 }
 
-.field {
+.productForm, .Edit, {
   margin-left: 50px;
 }
 
-.field>.formField, .formLabel {
+.productForm {
+  margin-bottom: 15px;
+}
+
+.formField, .formLabel {
   display: inline-block;
+  margin: 5px 5px;
+}
+
+.submit-btn {
+  margin-top: 10px;
 }

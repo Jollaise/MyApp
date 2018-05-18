@@ -86,7 +86,12 @@
 	          <li class="dropdown search dropdown-slide">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-search"></span> Search</a>
 	            <ul class="dropdown-menu search-dropdown">
-	              <li><form action="post"><input type="search" class="form-control" placeholder="Search..."></form></li>
+                <li>
+                  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                    <%= form.text_field :q, id: 'q', value: params[:q], placeholder: 'Search...', class: 'form-control' %>
+                  <% end %>
+                </li>
+	              <!-- <li><form action="post"><input type="search" class="form-control" placeholder="Search..."></form></li> -->
 	            </ul>
 	          </li><!-- / Search -->
 
