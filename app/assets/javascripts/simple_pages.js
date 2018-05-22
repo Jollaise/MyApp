@@ -2,29 +2,6 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-
-$(document).ready(function() {
-  // $("#contact-form").on('submit.blocker', function (e) {
-  //     setTimeout(function () {
-  //         $("#contact-form").off('submit.blocker').trigger('submit');
-  //     }, 4000);
-  //     e.preventDefault();
-  // });
-
-  $("#contact-submit").on('click', function(e){
-    swal({
-      type: 'success',
-      title: 'Thank You!',
-      text: 'We have received your message and will get back to you as soon as possible!',
-      showConfirmButton: false,
-      timer: 4000})
-    });
-});
-
-
-
-
 var map;
 function initMap() {
 
