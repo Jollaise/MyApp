@@ -8,7 +8,7 @@ $(document).ready(function() {
   $("#contact-form").on('submit.blocker', function (e) {
       setTimeout(function () {
           $("#contact-form").off('submit.blocker').trigger('submit');
-      }, 5000);
+      }, 4000);
       e.preventDefault();
   });
 
