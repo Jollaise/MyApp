@@ -30,38 +30,27 @@
 			<div class="row">
 				<!-- Contact Form -->
 				<div class="contact-form col-md-6 " >
-					<form id="contact-form" method="post" action="" role="form">
-
-						<div class="form-group">
-							<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
-						</div>
-
-						<div class="form-group">
-							<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
-						</div>
-
-						<div class="form-group">
-							<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
-						</div>
-
-						<div class="form-group">
-							<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
-						</div>
-
-						<div id="mail-success" class="success">
-							Thank you. The Mailman is on His Way :)
-						</div>
-
-						<div id="mail-fail" class="error">
-							Sorry, don't know what happened. Try later :(
-						</div>
-
-						<div id="cf-submit">
-							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
-						</div>
-
-					</form>
+          <%= flash[:notice] %>
+          <%= form_with(url:"/simple_pages/about", method: "post", id: "contact-form", local: true) do |form| %>
+          <!-- <div class="row"> -->
+            <div class="form-group">
+              <%= form.text_field :name, class: "form-control", placeholder: "Your Name", id: "name" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :email, class: "form-control", placeholder: "Your Email", id:"email" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_field :subject, class: "form-control", placeholder: "Subject", id:"subject" %>
+            </div>
+            <div class="form-group">
+              <%= form.text_area :message, class: "form-control", placeholder: "Message", rows: 6, id:"message" %>
+            </div>
+          <!-- </div> -->
+          <%= form.submit "Send", class: "form_label btn btn-transparent", id:"contact-submit" %>
+          <% end %>
 				</div>
+
+
 				<!-- ./End Contact Form -->
 
 				<!-- Contact Details -->
@@ -102,6 +91,7 @@
 		</div> <!-- end container -->
 	</div>
 </section>
+
 
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy_ygqydZJU6H_vonvQCEt-21NnbbT2f8&callback=initMap">
