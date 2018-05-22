@@ -5,12 +5,12 @@
 
 
 $(document).ready(function() {
-  $("#contact-form").on('submit.blocker', function (e) {
-      setTimeout(function () {
-          $("#contact-form").off('submit.blocker').trigger('submit');
-      }, 4000);
-      e.preventDefault();
-  });
+  // $("#contact-form").on('submit.blocker', function (e) {
+  //     setTimeout(function () {
+  //         $("#contact-form").off('submit.blocker').trigger('submit');
+  //     }, 4000);
+  //     e.preventDefault();
+  // });
 
   $("#contact-submit").on('click', function(e){
     swal({
