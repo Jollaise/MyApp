@@ -1,9 +1,6 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  font-family: "Arimo", Arial, sans-serif;
-}
 
 #BikeBerlin {
   font-family: "Yeseva One", monospace;
@@ -64,6 +61,8 @@ body {
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
+  margin: 0;
 }
 
 p {
@@ -94,6 +93,7 @@ a, a:focus, a:hover {
   text-decoration: none;
   outline: 0;
   color: #000;
+  background-color: transparent;
 }
 
 blockquote {
@@ -382,6 +382,22 @@ blockquote {
 
 .top-header .logo a {
   display: inline-block;
+}
+
+.login-buttons li {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.login-buttons li a {
+  display: block;
+  width: 200px;
+}
+
+#login-dropdown {
+  left: 0;
+  right: auto;
+  max-width: 300px;
 }
 
 .cart-dropdown .media {

@@ -21,17 +21,31 @@
 
   </head>
 
-  <body>
+<body>
 
     <!-- Start Top Header Bar -->
 <section class="top-header">
 	<div class="head container">
 		<div class="row">
 			<div class="col-md-4 col-xs-12 col-sm-4">
-				<div class="contact-number">
-          <span class="glyphicon glyphicon-earphone"></span>
-					<span>0129- 12323-123123</span>
-				</div>
+        <ul class="top-menu text-left list-inline">
+          <li class="dropdown dropdown-slide">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-user"></span> Login</a>
+            <div id="login-dropdown" class="dropdown-menu">
+                  <ul class="text-center login-buttons">
+                    <li><a href="#" class="btn btn-main">Register</a></li>
+                    <li>
+                    <% if user_signed_in? %>
+                      <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'btn btn-main btn-solid-border' %>
+                    <% else %>
+                      <%= link_to 'Login', new_user_session_path, :class => 'btn btn-main btn-solid-border' %>
+                    <% end %>
+                    </li>
+                    <!-- <li><a href="#" class="btn btn-main btn-solid-border">Login</a></li> -->
+                  </ul>
+              </div>
+          </li><!-- / Login -->
+        </ul>
 			</div>
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
@@ -51,8 +65,8 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12 col-sm-4">
-			<!-- Cart -->
-			<ul class="top-menu text-right list-inline">
+        <ul class="top-menu text-right list-inline">
+      <!-- Cart -->
 	          <li class="dropdown cart-nav dropdown-slide">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
 	            <div class="dropdown-menu cart-dropdown">
@@ -102,7 +116,6 @@
 		</div>
 	</div>
 </section><!-- End Top Header Bar -->
-
 
 <!-- Main Menu Section -->
 <section class="menu">
@@ -173,6 +186,9 @@
 	</nav>
 </section>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
   <%= yield %>
 
   <footer class="footer section text-center">
@@ -204,5 +220,5 @@
 	</div>
 </footer>
 
-  </body>
+</body>
 </html>
