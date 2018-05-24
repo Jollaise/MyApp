@@ -33,7 +33,8 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-user"></span> Login</a>
             <div id="login-dropdown" class="dropdown-menu">
                   <ul class="text-center login-buttons">
-                    <li><a href="#" class="btn btn-main">Register</a></li>
+                    <li>
+                      <%= link_to "Register", new_registration_path(resource_name), :class => 'btn btn-main' %>
                     <li>
                     <% if user_signed_in? %>
                       <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'btn btn-main btn-solid-border' %>
