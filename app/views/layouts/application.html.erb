@@ -34,7 +34,7 @@
             <div id="login-dropdown" class="dropdown-menu">
                   <ul class="text-center login-buttons">
                     <li>
-                      <%= link_to "Register", new_registration_path(resource_name), :class => 'btn btn-main' %>
+                      <%= link_to "Register", new_user_registration_path, :class => 'btn btn-main' %>
                     <li>
                     <% if user_signed_in? %>
                       <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'btn btn-main btn-solid-border' %>
@@ -154,7 +154,9 @@
 							        <li class="dropdown-header">Categories</li>
 							        <li role="separator" class="divider"></li>
                       <li><%= link_to "All", products_path %></li>
-							        <li><a href="#">Racing Bikes</a></li>
+							        <li>
+                        <a href="#">Racing Bikes</a>
+                      </li>
 							        <li><a href="#">Vintage Bikes</a></li>
 							        <li><a href="#">Roadster</a></li>
 	                	</ul>
