@@ -1,0 +1,23 @@
+<section class="signin-page account">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="review text-center">
+          <% if signed_in? %>
+            <h4 class="text-center">Add a review</h4>
+
+            <%= form_for([@product, @product.comments.build]) do |f| %>
+              <div class="form-group">
+                <%= f.text_area :body, class: 'form-control', placeholder: 'Your Comment' %>
+              </div>
+              <p><div class="rating"></div></p>
+              <div class="text-center actions">
+                <%= f.submit "Submit", class: 'btn btn-main text-center' %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
