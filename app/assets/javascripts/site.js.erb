@@ -16,9 +16,6 @@ $(document).on('turbolinks:load', function(){
     }
   });
 
-    setTimeout(function () {
-      $('#notice_wrapper').fadeOut('slow', function() {
-        $(this).remove();
-      })
-    }, 3500);
+  $("input[name='product-quantity']").TouchSpin();
+
 });
