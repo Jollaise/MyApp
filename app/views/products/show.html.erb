@@ -54,8 +54,10 @@
 							<div class="post-comments">
 						    	<ul class="media-list comments-list m-bot-50 clearlist">
 								    <!-- Comment Item start-->
-                    <li><%= @product.highest_rating_comment %></li>
-                    <li><%= @product.lowest_rating_comment %></li>
+                    <% if @product.comments.present? %>
+                      <li><%= @product.highest_rating_comment.body %></li>
+                      <li><%= @product.lowest_rating_comment.body %></li>
+                    <% end %>
 							</ul>
 							</div>
 						</div>
