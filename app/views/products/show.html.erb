@@ -41,27 +41,28 @@
 			<div class="productinfo col-xs-12">
 				<div class="tabCommon mt-20">
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#details" aria-expanded="true">Details</a></li>
-						<li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Reviews (3)</a></li>
+            <li class="active"><a data-toggle="tab" href="#reviews" aria-expanded="false">Reviews</a></li>
+						<li class=""><a data-toggle="tab" href="#details" aria-expanded="true">Details</a></li>
 					</ul>
 					<div class="tab-content patternbg">
-						<div id="details" class="tab-pane fade active in">
-							<h4>Product Description</h4>
-							<p><%= @product.description %></p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
-						</div>
-						<div id="reviews" class="tab-pane fade">
+						<div id="reviews" class="tab-pane fade active in">
 							<div class="post-comments">
 						    	<ul class="media-list comments-list m-bot-50 clearlist">
 								    <!-- Comment Item start-->
                     <%= render 'new_comment' %>
                     <%= render 'comments' %>
-                    <% if @product.comments.present? %>
-                      <li><%= @product.highest_rating_comment.body %></li>
-                      <li><%= @product.lowest_rating_comment.body %></li>
-                    <% end %>
-							</ul>
+                    <%= will_paginate @comments %>
+                    <!-- <%# if @product.comments.present? %>
+                      <li><%#= @product.highest_rating_comment.body %></li>
+                      <li><%#= @product.lowest_rating_comment.body %></li>
+                    <%# end %> -->
+							     </ul>
 							</div>
+						</div>
+            <div id="details" class="tab-pane fade">
+							<h4>Product Description</h4>
+							<p><%= @product.description %></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
 						</div>
 					</div>
 				</div>
