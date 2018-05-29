@@ -4,7 +4,9 @@
 			<div class="col-md-6">
 				<ol class="breadcrumb">
 					<li><a href="#">Home</a></li>
-					<li><a href="#">Shop</a></li>
+					<li>
+							<%= link_to 'Shop', products_path %>
+					</li>
 					<li class="active"><%= @product.name %></li>
 				</ol>
 			</div>
@@ -49,11 +51,11 @@
 							<div class="post-comments">
 						    	<ul class="media-list comments-list m-bot-50 clearlist">
 								    <!-- Comment Item start-->
-										<%= render 'new_comment' %>
 										<% if @product.comments.present? %>
 											<li><%= @product.highest_rating_comment.body %></li>
 											<li><%= @product.lowest_rating_comment.body %></li>
 										<% end %>
+										<%= render 'new_comment' %>
 										<%= render 'comments' %>
 										<%= will_paginate @comments %>
 							     </ul>
