@@ -6,7 +6,8 @@
   <p id="productDetails"><%= product.description %></p>
   <p><%= product.colour %></p>
   <p id="productPrice"><%= product.price %></p>
-
-  <%= link_to 'Edit', edit_product_path(product) %>
-  <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </div><!-- /col -->
