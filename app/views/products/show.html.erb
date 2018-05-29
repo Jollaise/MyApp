@@ -49,13 +49,13 @@
 							<div class="post-comments">
 						    	<ul class="media-list comments-list m-bot-50 clearlist">
 								    <!-- Comment Item start-->
-                    <%= render 'new_comment' %>
-                    <%= render 'comments' %>
-                    <%= will_paginate @comments %>
-                    <% if @product.comments.present? %>
-                      <li><%= @product.highest_rating_comment.body %></li>
-                      <li><%= @product.lowest_rating_comment.body %></li>
-                    <% end %>
+										<%= render 'new_comment' %>
+										<% if @product.comments.present? %>
+											<li><%= @product.highest_rating_comment.body %></li>
+											<li><%= @product.lowest_rating_comment.body %></li>
+										<% end %>
+										<%= render 'comments' %>
+										<%= will_paginate @comments %>
 							     </ul>
 							</div>
 						</div>
