@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :create, :update]
+  before_action :allow_admin, only: [:edit, :create, :update]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -31,6 +33,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    # byebug
   end
 
   # POST /products
@@ -75,8 +78,15 @@ class ProductsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
     def set_product
       @product = Product.find(params[:id])
+    end
+
+    def allow_admin
+      if current_user && !current_user.admin
+        redirect_to root_path
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

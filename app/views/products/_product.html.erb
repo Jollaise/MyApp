@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-6 col-md-4">
-  <%= image_tag(product.image_url, class: "productImage img-responsive") %>
+  <%= image_tag(product.image_url, class: "productImage img-responsive") rescue nil %>
   <%= link_to product do %>
     <h4><%= product.name %></h4>
   <% end %>

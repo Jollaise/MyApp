@@ -14,7 +14,7 @@
 		<div class="row mt-20">
 			<div class="col-md-5">
 				<div class="single-product-slider">
-				    <%= image_tag(@product.image_url, class: "productImage img-responsive") %>
+				    <%= image_tag(@product.image_url, class: "productImage img-responsive") rescue nil %>
 				</div>
 			</div>
 			<div class="col-md-7">
