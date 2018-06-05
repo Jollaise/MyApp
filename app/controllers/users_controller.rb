@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   load_and_authorize_resource
 
 
@@ -61,6 +62,11 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  # CANCANCAN
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_url, alert: exception.message
   end
 
   private
