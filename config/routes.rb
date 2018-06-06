@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'simple_pages/index'
   root 'products#index'
   post 'simple_pages/about'
+  post 'payments/create'
 
 
   resources :orders, only: [:index, :show, :create, :destroy]

@@ -199,6 +199,12 @@
   </div>
 <% end %>
 
+<% flash.each do |key, value| %>
+  <div id="notice_wrapper">
+    <p class="flash <%= flash_class(key) %>"><%= value %></p>
+  </div>
+<% end %>
+
 <%= yield %>
 
   <footer class="footer section text-center">
