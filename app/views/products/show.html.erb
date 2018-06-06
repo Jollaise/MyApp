@@ -35,7 +35,11 @@
 						</div>
 					</div>
 
-					<a href="#" class="btn btn-main mt-20">Add To Cart</a>
+					<!-- <a href="#" class="btn btn-main mt-20">Add To Cart</a> -->
+					<%= form_with(url: '/payments/create') do |form| %>
+  					<%= render partial: "shared/stripe_checkout_button" %>
+						<button type="submit" class="btn btn-main mt-20">Go to Checkout</button>
+					<% end %>
 				</div>
 			</div>
 		</div>
