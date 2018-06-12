@@ -190,17 +190,17 @@
 </section>
 
 <% if notice %>
-  <div id="notice_wrapper">
+  <div class="notice_wrapper">
     <p class="notice"><%= notice %></p>
   </div>
 <% elsif alert %>
-  <div id="notice_wrapper">
+  <div class="notice_wrapper">
     <p class="alert"><%= alert %></p>
   </div>
 <% end %>
 
 <% flash.each do |key, value| %>
-  <div id="notice_wrapper">
+  <div class="notice_wrapper">
     <p class="flash <%= flash_class(key) %>"><%= value %></p>
   </div>
 <% end %>

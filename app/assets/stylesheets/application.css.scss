@@ -16,7 +16,7 @@
  */
 
 
- #notice_wrapper {
+ .notice_wrapper {
    position: absolute;
    top: 0;
    width: 100%;
@@ -32,4 +32,8 @@
   font-weight: 700;
   color: #FFF;
   letter-spacing: 1px;
+}
+
+.img-zoom {
+  z-index: 999;
 }
