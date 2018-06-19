@@ -44,6 +44,8 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.1'
 gem 'stripe'
 gem 'dalli'
+gem 'redis-rails'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
