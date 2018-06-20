@@ -1,4 +1,4 @@
-<% cache @product do %>
+
 <section class="single-product">
 	<div class="container">
 		<div class="row">
@@ -20,11 +20,13 @@
 			</div>
 			<div class="col-md-7">
 				<div class="single-product-details">
+					<% cache @product do %>
 					<h2><%= @product.name %></h2>
 					<p class="product-price"><%= @product.price %></p>
 					<p class="product-description mt-20">
 						 <%= @product.description %>
 					</p>
+					<% end %>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, velit, sunt temporibus, nulla accusamus similique sapiente tempora, at atque cumque assumenda minus asperiores est esse sequi dolore magnam. Debitis, explicabo.</p>
           <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 					<div class="product-quantity">
@@ -78,7 +80,6 @@
 		</div>
 	</div>
 </section>
-<% end %>
 
 
 <% if signed_in? && current_user.admin? %>
