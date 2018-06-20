@@ -17,12 +17,3 @@
 //= require_tree .
 //= require jquery.raty.js
 //= require jquery.bootstrap-touchspin.js
-
-
-$(document).ready(function() {
-  setTimeout(function () {
-      $('.notice_wrapper').fadeOut('slow', function() {
-        $(this).remove();
-      })
-  }, 3500);
-})

@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :create, :update, :destroy]
-  before_action :allow_admin, only: [:edit, :create, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :create, :update]
+  before_action :allow_admin, only: [:edit, :create, :update]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
