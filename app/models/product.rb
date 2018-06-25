@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  validates :name, presence: true
+  validates :name, :description, :price, :image_url, presence: true
   has_many :orders
   has_many :comments
   def self.dev_search(search_term)

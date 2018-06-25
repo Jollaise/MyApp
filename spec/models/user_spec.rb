@@ -1,20 +1,23 @@
 require 'rails_helper'
 
-describe User do
+RSpec.describe User, type: :model do
 
-  context 'is not valid without an email' do
-    let(:user) { User.new(:password => 'testpswd') }
+  describe "db structure" do
+    it { is_expected.to have_db_column(:email).of_type(:string) }
+    it { is_expected.to have_db_column(:encrypted_password).of_type(:string) }
+    it { is_expected.to have_db_column(:created_at).of_type(:datetime) }
+    it { is_expected.to have_db_column(:updated_at).of_type(:datetime) }
 
-    it 'should return password only' do
-      expect(User.new(:password => 'testpswd')).not_to be_valid
-    end
+    it { is_expected.to have_db_index(:email) }
   end
 
-  context 'is not valid without an password' do
-    let(:user) { User.new(:email => 'user@examplemail.com') }
+  describe "secure password" do
+    it { is_expected.to have_secure_password }
+    it { is_expected.to validate_length_of(:password) }
+    it { should validate_presence_of(:password) }
+  end
 
-    it 'should return email only' do
-      expect(User.new(:email => 'user@examplemail.com')).not_to be_valid
-    end
+  describe "email" do
+    it { should validate_presence_of(:email) }
   end
 end
