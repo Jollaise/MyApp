@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+describe User, type: :model do
 
   describe "db structure" do
     it { is_expected.to have_db_column(:email).of_type(:string) }
@@ -12,7 +12,6 @@ RSpec.describe User, type: :model do
   end
 
   describe "secure password" do
-    it { is_expected.to have_secure_password }
     it { is_expected.to validate_length_of(:password) }
     it { should validate_presence_of(:password) }
   end

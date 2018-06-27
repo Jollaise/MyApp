@@ -5,9 +5,9 @@ FactoryBot.define do
     first_name "Peter"
     last_name "Example"
     admin false
-  end
 
-  factory :admin, parent: :user do
-    admin true
+    trait :admin do
+      admin true
+    end
   end
 end

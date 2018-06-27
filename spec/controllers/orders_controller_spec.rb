@@ -3,7 +3,7 @@ require 'rails_helper'
   describe OrdersController, type: :controller do
     context 'GET #index' do
       before do
-        @admin = FactoryBot.create(:admin)
+        @admin = FactoryBot.create(:user, :admin)
         @user = FactoryBot.create(:user)
       end
 
